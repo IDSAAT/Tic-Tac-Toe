@@ -46,9 +46,12 @@ bash
 4. Add option to choose who starts
 
 📄 License
+
 MIT License
 
 👤 Author
 Idu Samuel
+
 GitHub: @IDSAAT
+
 Email: officialcybermonk0@gmail.com
