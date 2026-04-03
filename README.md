@@ -1,6 +1,6 @@
 🎮 Tic-Tac-Toe Game
 
-A classic Tic-Tac-Toe game with two modes: Player vs Player and Player vs AI. Includes score tracking, win highlighting, and a smart AI opponent.
+A classic Tic-Tac-Toe game with two modes: Player vs Player and Player vs AI. Includes score tracking, win highlighting and a smart AI opponent.
 
 📌 Live Demo
 
