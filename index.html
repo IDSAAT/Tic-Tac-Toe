@@ -1,0 +1,64 @@
+V<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe | Classic Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-card">
+            <h1>🎮 Tic-Tac-Toe</h1>
+            
+            <!-- Game Mode Selector -->
+            <div class="mode-selector">
+                <button id="pvpMode" class="mode-btn active">👥 Player vs Player</button>
+                <button id="pveMode" class="mode-btn">🤖 Player vs AI</button>
+            </div>
+            
+            <!-- Game Status -->
+            <div class="game-status">
+                <p id="statusText">Player X's turn</p>
+            </div>
+            
+            <!-- Game Board -->
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            
+            <!-- Score Board -->
+            <div class="scoreboard">
+                <div class="score-card">
+                    <span class="score-label">❌ X Wins</span>
+                    <span id="xScore" class="score-value">0</span>
+                </div>
+                <div class="score-card">
+                    <span class="score-label">⭕ O Wins</span>
+                    <span id="oScore" class="score-value">0</span>
+                </div>
+                <div class="score-card">
+                    <span class="score-label">🤝 Draws</span>
+                    <span id="drawScore" class="score-value">0</span>
+                </div>
+            </div>
+            
+            <!-- Control Buttons -->
+            <div class="game-controls">
+                <button id="resetBtn" class="btn btn-reset">🔄 New Game</button>
+                <button id="resetScoreBtn" class="btn btn-score">📊 Reset Scores</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

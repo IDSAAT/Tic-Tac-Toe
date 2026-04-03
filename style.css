@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 550px;
+}
+
+.game-card {
+    background: white;
+    border-radius: 32px;
+    padding: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+h1 {
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* Mode Selector */
+.mode-selector {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    background: #f1f5f9;
+    padding: 0.5rem;
+    border-radius: 60px;
+}
+
+.mode-btn {
+    flex: 1;
+    padding: 0.6rem;
+    border: none;
+    background: transparent;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #64748b;
+}
+
+.mode-btn.active {
+    background: #3b82f6;
+    color: white;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.mode-btn:hover:not(.active) {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+/* Game Status */
+.game-status {
+    margin-bottom: 1.5rem;
+}
+
+#statusText {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1e293b;
+    padding: 0.5rem;
+    background: #f1f5f9;
+    border-radius: 60px;
+}
+
+/* Game Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background: #1e293b;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.cell {
+    aspect-ratio: 1 / 1;
+    background: white;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #1e293b;
+}
+
+.cell:hover {
+    background: #e2e8f0;
+    transform: scale(1.02);
+}
+
+.cell.disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.cell.x-move {
+    color: #3b82f6;
+}
+
+.cell.o-move {
+    color: #10b981;
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.score-card {
+    flex: 1;
+    background: #f1f5f9;
+    padding: 0.75rem;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.score-label {
+    display: block;
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-bottom: 0.25rem;
+}
+
+.score-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* Control Buttons */
+.game-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 40px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-reset {
+    background: #3b82f6;
+    color: white;
+}
+
+.btn-reset:hover {
+    background: #2563eb;
+}
+
+.btn-score {
+    background: #ef4444;
+    color: white;
+}
+
+.btn-score:hover {
+    background: #dc2626;
+}
+
+/* Winning Highlight Animation */
+.cell.winner {
+    background: #fef3c7;
+    animation: pulse 0.5s ease;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .game-card {
+        padding: 1.5rem;
+    }
+    
+    .cell {
+        font-size: 2.5rem;
+    }
+    
+    .mode-btn {
+        font-size: 0.8rem;
+    }
+    
+    #statusText {
+        font-size: 1rem;
+    }
+}
